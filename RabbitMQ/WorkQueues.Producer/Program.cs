@@ -24,7 +24,7 @@ namespace WorkQueues.Producer
             {
                 channel.QueueDeclare(
                     queue: "work-queue",
-                    durable: false,
+                    durable: true,
                     exclusive: false,
                     autoDelete: false,
                     arguments: null

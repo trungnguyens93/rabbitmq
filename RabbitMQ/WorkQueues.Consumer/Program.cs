@@ -25,11 +25,13 @@ namespace WorkQueues.Consumer
             {
                 channel.QueueDeclare(
                     queue: "work-queue",
-                    durable: false,
+                    durable: true,
                     exclusive: false,
                     autoDelete: false,
                     arguments: null
                 );
+
+                channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
 
                 var consumer = new EventingBasicConsumer(channel);
 
