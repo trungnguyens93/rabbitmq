@@ -44,10 +44,9 @@ namespace Basic.Consumer
                     autoAck: true,
                     consumer: consumer
                 );
-            }
 
-            Console.WriteLine(" Press [Enter] to exit");
-            Console.ReadLine();
+                Console.ReadLine();
+            }
         }
     }
 }

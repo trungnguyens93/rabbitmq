@@ -41,9 +41,6 @@ namespace Basic.Producer
 
                 Console.WriteLine(" [X] Sent: {0}", message);
             }
-
-            Console.WriteLine(" Press [Enter] to exit!!!");
-            Console.ReadLine();
         }
     }
 }
