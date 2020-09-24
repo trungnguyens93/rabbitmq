@@ -16,3 +16,15 @@
   - BasicQos với [prefetchCount = 1]: nói với RabbitMQ rằng không gửi nhiều hơn 1 message đến 1 consumer vào một lúc
   - Ack: được gửi tới RabbitMQ từ consumer, để báo với RabbitMQ rằng message cụ thể đã được nhận, xử lý. Khi đó RabbitMQ có thể xóa message đó ra khỏi Queue 
 
+### 3. Publish/Subscribe
+- Exchange: publish-exchange
+- Exchange Type: fanout
+- Queue: ""
+- Producer:
+  - exchange-type: fanout
+  - routing-key: ""
+- Consumer:
+  - channel.QueueDeclare().QueueName: tự sinh queue không cần tham số
+  - channel.QueueBinding: binding queu tự sinh với exchange
+
+
